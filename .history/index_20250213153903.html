@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Navbar - Block</title>
+</head>
+<body style="background-color: #f0f1f2;">
+    <nav class="cba-nav-container">
+        <div class="cba-nav-side-menu-toggle-icon-loading-pagename">
+            <div class="cba-nav-side-menu-toggle-icon">
+                <!-- toggle first icon -->
+                <i class='t-icon-open bx bx-menu-alt-right' id="iconDisplay" onclick="toggleIcon()"></i>
+                <!-- toggle second icon -->
+                <!-- <i class='t-icon-close bx bx-menu-alt-left' id="iconDisplay" onclick="toggleIcon()"></i> -->
+                <!--todo: one of the toggle icon should be commented-->
+            </div>
+            <div class="cba-nav-loading-pagename">
+                <h3>Loading Page Name</h3>
+            </div>
+        </div>
+        <div class="cba-nav-features-user-logo-name">
+            <div class="cba-nav-features">
+                <div class="cba-nav-close-counter">
+                    <img src="/img/cash-register.png" alt="cash-register-img">
+                    <h3>Close register</h3>!
+                </div>
+                <div class="cba-nav-keyboard-shortcut">
+                    <img src="/img/computer-keyboard.png" alt="keyboard-img">
+                </div>
+                <div class="cba-nav-ltr-rtl-switch">
+                    <h3><span id="text">LTR</span></h3>
+                </div>
+                <div class="cba-nav-lang-switch" onclick="toggleImage()">
+                    <img src="/img/united-states.png" title="English" alt="united-state-flag" id="image">
+                </div>
+            </div>
+            <div class="cba-nav-user-logo-name">
+                <div class="cba-nav-user-logo">
+                    <img src="/img/User.png" alt="user-img">
+                </div>
+                <div class="cba-nav-user-name">
+                    <div class="cba-nav-user-name">
+                        <h3>MD Adnan Addro</h3>
+                    </div>
+                    <div class="cba-nav-user-role">
+                        <h4>Admin</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Javascript -->
+    <script src="/script/main.js"></script>
+</body>
+</html>

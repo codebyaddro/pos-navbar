@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Navbar - Block</title>
+</head>
+<body>
+    <nav class="cba-nav-container">
+        <div class="cba--side-menu-toggle-icon-loading-pagename">
+            <div class="cba-side-menu-toggle-icon">
+                <!-- toggle first icon -->
+                <i class='t-icon-open bx bx-menu-alt-right' id="iconDisplay" onclick="toggleIcon()"></i>
+                <!-- toggle second icon -->
+                <!-- <i class='t-icon-close bx bx-menu-alt-left' id="iconDisplay" onclick="toggleIcon()"></i> -->
+                <!--todo: one of the toggle icon should be commented-->
+            </div>
+            <div class="cba-loading-pagename">
+                <h3><span>Loading Page Name</span></h3>
+            </div>
+        </div>
+        <div class="cba-nav-features-user-logo-name">
+            <div class="cba-nav-features">
+                <div class="cba-close-counter">
+                    <img src="/img/cash-register.png" alt="cash-register-img">
+                        <h3>Close register</h3>
+                </div>
+                <div class="cba-keyboard-shortcut">
+                    <img src="/img/computer-keyboard.png" alt="keyboard-img">
+                </div>
+                <div class="cba-ltr-rtl-switch">
+                    <h3><span id="text">LTR</span></h3>
+                </div>
+                <div class="cba-lang-switch" onclick="toggleImage()">
+                    <img src="/img/united-states.png" title="English" alt="united-state-flag" id="image">
+                </div>
+                <div class="cba-fullscreen-switch"></div>
+            </div>
+            <div class="cba-user-logo-name">
+                <div class="cba-user-logo"></div>
+                <div class="cba-user-name">
+                    <div class="cba-user-name"></div>
+                    <div class="cba-user-role"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Javascript -->
+    <script src="/script/main.js"></script>
+</body>
+</html>
