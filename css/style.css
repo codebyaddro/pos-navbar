@@ -8,15 +8,17 @@
     --white: #FFFFFF;
     --black: #000000;
     --gray-black: #DDDDDD;
-    --light-black: #212523;
-    --light-black-op: #21252350;
+    --lt-gray: #EFEFEF;
+    --lt-black: #212523;
+    --lt-black-op: #21252350;
     --main-green: #157343;
-    --main-light: #37A000;
-    --light-orange: #FD7E14;
+    --main-lt: #37A000;
+    --lt-orange: #FD7E14;
     --green: #008000;
-    --light-green: #e9f6ec;
+    --lt-green: #e9f6ec;
+    --lp-green: #F8FAF8;
     --red: #FF0000;
-    --light-red: #fbeaec;
+    --lt-red: #fbeaec;
 }
 
 /* -- universal style -- */
@@ -32,7 +34,7 @@
 
 ::selection {
     color: var(--white);
-    background-color: var(--main-light);
+    background-color: var(--main-lt);
 }
 
 /* -- nav container style -- */
@@ -42,6 +44,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
+    background-color: var(--white);
 }
 
 /* -- nav side menu toggle icon and loading pagename style -- */
@@ -50,6 +53,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    margin-top: 5px;
 }
 
 /* -- nav side menu toggle icon style -- */
@@ -71,7 +75,7 @@
 .cba-nav-loading-pagename h3 {
     color: var(--black);
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: 500;
     margin-top: -5px;
 }
 
@@ -79,7 +83,7 @@
 
 .cba-nav-features-user-logo-name {
     display: flex;
-    /* gap: 10px; */
+    gap: 20px;
     align-items: center;
 }
 
@@ -87,7 +91,7 @@
 
 .cba-nav-features {
     display: flex;
-    gap: 10px;
+    gap: 15px;
     align-items: center;
 }
 
@@ -97,9 +101,9 @@
     display: flex;
     gap: 10px;
     align-items: center;
-    background-color: var(--gray-black);
+    background-color: var(--lp-green);
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -118,10 +122,10 @@
 /* -- nav keyboard shortcut style -- */
 
 .cba-nav-keyboard-shortcut {
-    background-color: var(--gray-black);
+    background-color: var(--lp-green);
     padding: 0px 5px;
     height: 44px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
@@ -134,15 +138,226 @@
 /* -- nav LTR and RTL switch style -- */
 
 .cba-nav-ltr-rtl-switch {
-    background-color: var(--gray-black);
-    padding: 5.5px 10px;
+    background-color: var(--lt-gray);
+    padding: 4.5px 10px;
+    border: 1px solid var(--gray-black);
     border-radius: 5px;
     cursor: pointer;
 }
 
+.cba-nav-ltr-rtl-switch:hover {
+    background-color: var(--gray-black);
+}
+
 .cba-nav-ltr-rtl-switch h3 {
-    color: var(--black);
+    color: var(--lt-black);
     font-size: 1.25rem;
     font-weight: 400;
     margin-top: 3px;
+}
+
+/* -- nav language switch style -- */
+
+.cba-nav-lang-switch {
+    background-color: var(--lt-gray);
+    padding: 5px 5px;
+    border: 1px solid var(--gray-black);
+    border-radius: 5px;
+    cursor: pointer;
+    height: 44px;
+    width: 44px;
+}
+
+.cba-nav-lang-switch:hover {
+    background-color: var(--gray-black);
+}
+
+.cba-nav-lang-switch img {
+    height: 32.5px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+/* -- nav fullscreen switch style -- */
+
+.cba-nav-fullscreen-switch {
+    background-color: var(--lp-green);
+    padding: 5px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 44px;
+    width: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -- nav fullscreen icon style -- */
+
+.fullscreen-icon {
+    color: var(--lt-black);
+    font-size: 1.75rem;
+    margin-top: 2px;
+    margin-left: -1.5px;
+}
+
+.exit-fullscreen-icon {
+    color: var(--lt-black);
+    font-size: 1.75rem;
+    margin-top: 2px;
+    margin-left: -1.5px;
+}
+
+/* -- nav user logo name style -- */
+
+.cba-nav-user-logo-name {
+    display: flex;
+    gap: 7.5px;
+    align-items: center;
+    margin-top: 6.5px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* -- nav user logo style -- */
+
+.cba-nav-user-logo img {
+    height: 44px;
+    width: 44px;
+}
+
+/* -- nav user name and role style -- */
+
+.cba-nav-user-name h3 {
+    color: var(--black);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-top: -5px;
+}    
+
+.cba-nav-user-role h4 { 
+    color: var(--black);
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+/* -- nav user modal style -- */
+
+.cba-nav-user-modal-container {
+    background-color: var(--lp-green);
+    height: 305px;
+    width: 240px;
+    display: none;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 50px;
+    margin-top: 50px;
+    position: absolute;
+    z-index: 1;
+    top: 25px;
+    right: 10px;
+}
+
+#btn {
+    display: none;
+}
+
+.cba-nav-user-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* -- nav user modal top part style -- */
+
+.cnum-top-part {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 15px;
+}
+
+.cnum-top-part img {
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+}
+
+.cnum-top-part h3 { 
+    color: var(--black);
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.cnum-top-part h3:hover {
+    color: var(--lt-black);
+}
+
+.cnum-top-part h5 {
+    color: var(--lt-black-op);
+    font-size: 0.813rem;
+    font-weight: 400;
+}
+
+/* -- nav user modal middle part style -- */
+
+.cnum-middle-part {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.cnum-middle-part h3 {
+    color: var(--main-lt);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cnum-middle-part h3:hover {
+    color: var(--lt-black);
+}
+
+/* -- nav user modal bottom part style -- */
+
+.cnum-bottom-part {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cba-nav-modal-sign-out-btn {
+    color: var(--black)!important;
+    background-color: var(--lt-gray);
+    padding: 5px 10px;
+    border: 1px solid var(--gray-black);
+    border-radius: 5px;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.cba-nav-modal-close-btn {
+    color: var(--red)!important;
+    background-color: var(--lt-gray);
+    padding: 5px 10px;
+    border: 1px solid var(--gray-black);
+    border-radius: 5px;
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
 }
